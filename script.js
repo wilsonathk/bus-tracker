@@ -11,7 +11,7 @@ async function searchBus() {
 
     // 使用城巴/新巴的公開 API (相對開放，不易被擋)
     // 注意：這裡使用的是 DATA.GOV.HK 的城巴資源
-    const url = `https://rt.data.gov.hk/v2/transport/citybus/route-stop/${stopId}`;
+    const url = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://rt.data.gov.hk/v2/transport/citybus/route-stop/' + stopId)}`;
 
     try {
         const response = await fetch(url);
